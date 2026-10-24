@@ -3,6 +3,7 @@ export const profile = {
   shortName: 'Aaron',
   role: 'Full Stack LLM Engineer Associate',
   location: 'Manila, Philippines',
+  timezone: 'Asia/Manila',
   email: 'maureal.aaron@gmail.com',
   github: 'https://github.com/aaronjoshua-dev',
   linkedin: 'https://www.linkedin.com/in/aaron-maureal/',
