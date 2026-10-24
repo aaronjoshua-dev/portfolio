@@ -69,6 +69,6 @@ export const projects = [
     description: 'My personal website to showcase my profile, skills and projects, and a place to try out new technology.',
     tech: ['Vue 3', 'Tailwind CSS'],
     github: 'https://github.com/aaronjoshua-dev/portfolio.git',
-    demo: 'https://aaronjoshuadev.netlify.app/',
+    demo: 'https://aaron-maureal.vercel.app/',
   },
 ]
