@@ -2,7 +2,7 @@
   <div class="relative flex min-h-screen flex-col">
     <!-- Fixed to the viewport so the pattern stays put while scrolling -->
     <div class="dot-grid dot-grid-tr pointer-events-none fixed right-0 top-0 -z-10 h-[32rem] w-full max-w-3xl" aria-hidden="true"></div>
-    <div class="dot-grid dot-grid-bl pointer-events-none fixed bottom-0 left-0 -z-10 h-[32rem] w-full max-w-3xl" aria-hidden="true"></div>
+    <div class="dot-grid dot-grid-bl pointer-events-none fixed bottom-0 left-0 -z-10 hidden h-[32rem] w-full max-w-3xl sm:block" aria-hidden="true"></div>
 
     <header class="sticky top-0 z-50 border-b border-line bg-canvas/80 backdrop-blur-md">
       <div class="mx-auto flex h-16 max-w-2xl items-center justify-between gap-4 px-4 sm:px-6">
@@ -10,7 +10,9 @@
 
         <div class="flex items-center gap-2 sm:gap-4">
           <nav class="flex items-center gap-3 font-mono text-xs sm:gap-6">
-            <router-link v-for="link in links" :key="link.to" :to="link.to" class="nav-link">
+            <!-- On phones the name already links home, so the Home link is hidden to save space -->
+            <router-link v-for="link in links" :key="link.to" :to="link.to" class="nav-link"
+              :class="{ 'hidden sm:inline': link.to === '/' }">
               {{ link.label }}
             </router-link>
           </nav>
@@ -19,12 +21,12 @@
       </div>
     </header>
 
-    <main class="relative mx-auto w-full max-w-2xl flex-1 px-4 py-16 sm:px-6 sm:py-24">
+    <main class="relative mx-auto w-full max-w-2xl flex-1 px-4 py-12 sm:px-6 sm:py-24">
       <router-view />
     </main>
 
     <footer class="border-t border-line">
-      <div class="mx-auto flex max-w-2xl flex-col gap-2 px-4 py-8 font-mono text-xs text-muted sm:flex-row sm:justify-between sm:px-6">
+      <div class="mx-auto flex max-w-2xl items-center justify-between gap-4 px-4 py-8 font-mono text-xs text-muted sm:px-6">
         <p>&copy; {{ year }} {{ profile.name }}</p>
         <div class="flex gap-5">
           <a :href="profile.github" target="_blank" rel="noreferrer" class="transition-colors hover:text-fg">GitHub</a>

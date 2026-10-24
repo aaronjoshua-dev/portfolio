@@ -1,11 +1,11 @@
 <template>
-  <section class="fade-up grid items-center gap-10 sm:grid-cols-[17rem_1fr]">
+  <section class="fade-up grid items-center gap-8 sm:grid-cols-[17rem_1fr] sm:gap-10">
     <!-- Smooth monotone in dark mode, natural colour in light mode -->
     <img :src="profile.avatar" :alt="profile.name"
-      class="aspect-square w-full max-w-[17rem] rounded-lg object-cover transition-[filter] duration-300 dark:brightness-90 dark:grayscale" />
+      class="aspect-square w-32 rounded-lg sm:w-full sm:max-w-[17rem] object-cover transition-[filter] duration-300 dark:brightness-90 dark:grayscale" />
 
     <div>
-      <h1 class="font-mono text-4xl leading-tight tracking-tight">{{ profile.name }}</h1>
+      <h1 class="font-mono text-3xl leading-tight tracking-tight sm:text-4xl">{{ profile.name }}</h1>
       <div class="mt-6 space-y-5 leading-relaxed text-fg/80">
         <p v-for="(paragraph, i) in profile.intro" :key="i">{{ paragraph }}</p>
       </div>
@@ -19,12 +19,12 @@
     </div>
   </section>
 
-  <section class="fade-up delay-1 mt-24">
+  <section class="fade-up delay-1 mt-16 sm:mt-24">
     <h2 class="border-b border-line pb-6 font-mono text-sm text-muted">Stack</h2>
     <StackList class="mt-8" />
   </section>
 
-  <section class="fade-up delay-2 mt-24">
+  <section class="fade-up delay-2 mt-16 sm:mt-24">
     <div class="flex items-baseline justify-between border-b border-line pb-6">
       <h2 class="font-mono text-sm text-muted">Experience</h2>
       <router-link to="/about"
@@ -35,7 +35,7 @@
     <ExperienceList class="ml-1 mt-8" />
   </section>
 
-  <section class="fade-up delay-2 mt-24">
+  <section class="fade-up delay-2 mt-16 sm:mt-24">
     <div class="flex items-baseline justify-between border-b border-line pb-6">
       <h2 class="font-mono text-sm text-muted">Work</h2>
       <router-link to="/portfolio"

@@ -6,12 +6,12 @@
     </div>
   </section>
 
-  <section class="fade-up delay-1 mt-24">
+  <section class="fade-up delay-1 mt-16 sm:mt-24">
     <h2 class="border-b border-line pb-6 font-mono text-sm text-muted">Stack</h2>
     <StackList class="mt-8" />
   </section>
 
-  <section class="fade-up delay-2 mt-24">
+  <section class="fade-up delay-2 mt-16 sm:mt-24">
     <h2 class="border-b border-line pb-6 font-mono text-sm text-muted">Experience</h2>
     <ExperienceList detailed class="ml-1 mt-8" />
   </section>

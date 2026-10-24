@@ -17,7 +17,7 @@
       </button>
     </div>
 
-    <dl class="mt-14 grid gap-6 border-t border-line pt-8 sm:grid-cols-3">
+    <dl class="mt-10 grid grid-cols-2 gap-6 border-t border-line pt-8 sm:mt-14 sm:grid-cols-3">
       <div>
         <dt class="font-mono text-[11px] uppercase tracking-[0.15em] text-muted">Location</dt>
         <dd class="mt-2">{{ profile.location }}</dd>
@@ -26,7 +26,7 @@
         <dt class="font-mono text-[11px] uppercase tracking-[0.15em] text-muted">Local time</dt>
         <dd class="mt-2 tabular-nums">{{ localTime }} <span class="text-muted">· GMT+8</span></dd>
       </div>
-      <div>
+      <div class="col-span-2 sm:col-span-1">
         <dt class="font-mono text-[11px] uppercase tracking-[0.15em] text-muted">Status</dt>
         <dd class="mt-2 flex items-center gap-2">
           <span class="h-2 w-2 rounded-full bg-fg" aria-hidden="true"></span>
@@ -36,7 +36,7 @@
     </dl>
   </section>
 
-  <section class="fade-up delay-1 mt-20">
+  <section class="fade-up delay-1 mt-16 sm:mt-20">
     <h2 class="font-mono text-[11px] uppercase tracking-[0.15em] text-muted">Reach out about</h2>
     <ul class="mt-6 grid gap-px overflow-hidden rounded-lg border border-line bg-line sm:grid-cols-2">
       <li v-for="topic in topics" :key="topic.title" class="bg-canvas p-5">
@@ -46,7 +46,7 @@
     </ul>
   </section>
 
-  <section class="fade-up delay-2 mt-20">
+  <section class="fade-up delay-2 mt-16 sm:mt-20">
     <h2 class="font-mono text-[11px] uppercase tracking-[0.15em] text-muted">Elsewhere</h2>
     <ul class="mt-6 divide-y divide-line border-y border-line">
       <li v-for="link in links" :key="link.label">
